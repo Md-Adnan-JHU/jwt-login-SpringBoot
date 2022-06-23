@@ -1,6 +1,7 @@
 package com.adn.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackRefrence;
 
 import javax.persistence.*;
 
@@ -23,6 +24,7 @@ public class StudentDetails {
 
     @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "studentDetails")
     @JsonIgnore
+    @JsonBackReference
     private Student student;
 
 
