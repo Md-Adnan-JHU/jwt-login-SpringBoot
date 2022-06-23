@@ -21,6 +21,7 @@ public class Student {
     @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     @JsonIgnore
+    @JsonIgnore
     private StudentDetails studentDetails;
 
     public Student() { }
